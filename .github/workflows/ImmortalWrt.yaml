@@ -1,0 +1,175 @@
+name: Compile
+
+on:
+
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+  - cron: "43 21 * * *"
+
+jobs:
+
+  check:
+
+    if: ${{ github.event_name == 'schedule' }}
+    runs-on: ubuntu-latest
+    outputs:
+      check: ${{ steps.cacheHash.outputs.cache-hit }}
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@main
+      with:
+        repository: 'vernesong/OpenClash'
+        ref: 'dev'
+
+    - name: Get Commit Hash
+      id: getHash
+      run: echo "commitHash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+
+    - name: Compare Commit Hash
+      id: cacheHash
+      uses: actions/cache@main
+      with:
+        path: .commitHash
+        key: HEAD-${{ steps.getHash.outputs.commitHash }}
+
+    - name: Save New Commit Hash
+      if: steps.cacheHash.outputs.cache-hit != 'true'
+      run: echo ${{ steps.getHash.outputs.commitHash }} | tee .commitHash
+
+  Build:
+
+    needs: check
+    if: ${{ needs.check.outputs.check != 'true' || ( github.event_name != 'schedule' && always() ) }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        BRANCH: [openwrt-21.02, master]
+
+    steps:
+
+    - name: Maximize Build Space
+      uses: easimon/maximize-build-space@master
+      with:
+        remove-android: 'true'
+        remove-codeql: 'true'
+        remove-docker-images: 'true'
+        remove-dotnet: 'true'
+        remove-haskell: 'true'
+        root-reserve-mb: '6789'
+
+    - name: Initialization Environment
+      run: sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh)'
+
+    - name: Checkout
+      uses: actions/checkout@main
+
+    - name: Checkout ImmortalWrt
+      uses: actions/checkout@main
+      with:
+        repository: 'immortalwrt/immortalwrt'
+        ref: ${{ matrix.BRANCH }}
+        path: Router
+
+    - name: Cache
+      uses: stupidloud/cachewrtbuild@main
+      with:
+        ccache: 'true'
+        prefix: Router
+
+    - name: Feeds And Config
+      run: |
+        cd Router
+        echo 'src-git OpenClash https://github.com/vernesong/OpenClash.git;dev' >> feeds.conf.default
+        scripts/feeds update -a
+        rm -rf feeds/luci/applications/luci-app-openclash
+        scripts/feeds update -a
+        scripts/feeds install -a
+        # mv ../.config ../NN.txt .
+        touch .config
+        cat >> .config << EOF
+        CONFIG_GRUB_EFI_IMAGES=y
+        CONFIG_PACKAGE_default-settings-chn=y
+        CONFIG_PACKAGE_luci-app-fileassistant=y
+        CONFIG_PACKAGE_luci-app-ksmbd=y
+        CONFIG_PACKAGE_luci-app-openclash=y
+        CONFIG_PACKAGE_luci-app-qbittorrent=y
+        CONFIG_PACKAGE_luci-app-upnp=y
+        CONFIG_PACKAGE_luci-app-vlmcsd=y
+        CONFIG_PACKAGE_luci-theme-material=y
+        CONFIG_TARGET_IMAGES_GZIP=y
+        CONFIG_TARGET_x86_64_DEVICE_generic=y
+        CONFIG_TARGET_x86_64=y
+        CONFIG_TARGET_x86=y
+        EOF
+        make defconfig
+        # for i in {1..3}; do
+        #   awk '/^# 3\. Applications$/,/^# end of 4\. Themes$/' .config > tempa.config
+        #   grep -vFf NN.txt tempa.config | awk '/ is not set$/ {gsub("^# ", ""); print $1 "=m"; next} {print}' > tempb.config
+        #   awk '/# 3\. Applications/{flag=1; system("cat tempb.config"); print ""; next} /# end of 4\. Themes/{flag=0} !flag' .config > tempa.config
+        #   mv tempa.config .config
+        #   rm tempb.config
+        #   make defconfig
+        # done
+
+    - name: Compile The Firmware
+      run: |
+        cd Router
+        echo -e "$(nproc) thread compile"
+        make -j$[`nproc`+1] || make -j$(nproc) || make -j1 V=sc
+        echo "RELEASE=$(date)" >> $GITHUB_ENV
+        echo "RELAESE=$(date +"%m%d")" >> $GITHUB_ENV
+
+    - name: Git Push Assets To ${{ matrix.BRANCH }} Branch
+      run: |
+        cd Router/bin
+        git init
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git checkout -b ${{ matrix.BRANCH }}
+        git add .
+        git commit -m "${{ env.RELEASE }}"
+        git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+        git push -f -u origin ${{ matrix.BRANCH }}
+
+    - name: Organize Files
+      run: |
+        mkdir UPLD
+        find Router/bin -name "*.ipk" | xargs tar czvf UPLD/"${{ env.RELAESE }}_${{ matrix.BRANCH }}_ipks.tgz"
+        mv Router/bin/targets/*/*/*efi*gz UPLD
+
+    - name: Remove Old Releases
+      uses: dev-drprasad/delete-older-releases@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        delete_tags: true
+        keep_latest: 98
+
+    - name: Upload Firmware To Release
+      uses: softprops/action-gh-release@master
+      with:
+        tag_name: ${{ env.RELAESE }}_${{ matrix.BRANCH }}
+        body: ${{ env.RELEASE }}
+        files: UPLD/*
+
+    - name: Delete Workflow Runs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        keep_minimum_runs: 0
+        retain_days: 0
+
+  Retry:
+
+    needs: Build
+    if: ${{ failure() }}
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Retry
+      uses: peter-evans/repository-dispatch@main
+      with:
+        event-type: Retry
