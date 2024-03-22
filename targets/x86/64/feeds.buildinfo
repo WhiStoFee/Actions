@@ -1,0 +1,5 @@
+src-git packages https://github.com/immortalwrt/packages.git^b0761a2a40d4c1d0874c499bd3ccc6a46ce76919
+src-git luci https://github.com/immortalwrt/luci.git^82bc9cd6f3edec2c74848b37781110f0e5b42aea
+src-git routing https://github.com/openwrt/routing.git^61f15a76a62abd312cd73ff187e5e91e647af1a1
+src-git telephony https://github.com/openwrt/telephony.git^c60658b7db8b6d49735912732c2d2a9293d140bf
+src-git OpenClash https://github.com/vernesong/OpenClash.git^266be0a0f955c13d37a547a6aba680b33ff5955c
