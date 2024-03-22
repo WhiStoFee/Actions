@@ -1,0 +1,1049 @@
+Package: alsa-lib
+Version: 1.2.4-1
+Depends: libc, kmod-sound-core, libpthread, librt
+Source: feeds/packages/libs/alsa-lib
+SourceName: alsa-lib
+License: LGPL-2.1-or-later
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1606285910
+Maintainer: Ted Hess <thess@kitschensync.net>, Peter Wagner <tripolar@gmx.at>
+Architecture: x86_64
+Installed-Size: 387137
+Filename: alsa-lib_1.2.4-1_x86_64.ipk
+Size: 386879
+SHA256sum: 03b89513378de798582a9af3456284804ea4dd49cb495cbfb99ec45b4e0431c7
+Description:  This is the library package for alsa, needed by some userspace programs.
+ You must have enabled the ALSA support in the kernel.
+
+Package: alsa-ucm-conf
+Version: 1.2.4-1
+Depends: libc
+Source: feeds/packages/libs/alsa-ucm-conf
+SourceName: alsa-ucm-conf
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Section: libs
+SourceDateEpoch: 1606285911
+Architecture: all
+Installed-Size: 26586
+Filename: alsa-ucm-conf_1.2.4-1_all.ipk
+Size: 27179
+SHA256sum: 0076bc9000dbea7b963512eb7b35fcd8446412fa65e4d1ca8d4e2eb24b376230
+Description:  This is a set of configuration files needed for some ALS utilities like alsactl.
+
+Package: alsa-utils
+Version: 1.2.4-1
+Depends: libc, alsa-lib, alsa-ucm-conf, libncursesw6, libpthread
+Source: feeds/packages/sound/alsa-utils
+SourceName: alsa-utils
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Section: sound
+SourceDateEpoch: 1606285911
+Maintainer: Ted Hess <thess@kitschensync.net>
+Architecture: x86_64
+Installed-Size: 134524
+Filename: alsa-utils_1.2.4-1_x86_64.ipk
+Size: 135208
+SHA256sum: 8fa81ab3bb41214824a74e28ab66a8ef1f795cda2ba0a1ab0f802cd1a4afab78
+Description:  ALSA (Advanced Linux Sound Architecture) utilities
+
+Package: bash
+Version: 5.1.16-1
+Depends: libc, libncurses6, libreadline8
+Source: feeds/packages/utils/bash
+SourceName: bash
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1674154351
+CPE-ID: cpe:/a:gnu:bash
+Maintainer: Marcel Denia <naoir@gmx.net>
+Architecture: x86_64
+Installed-Size: 466855
+Filename: bash_5.1.16-1_x86_64.ipk
+Size: 467674
+SHA256sum: 9ffe2d36fb326cdd7a2e23aa5a1820fc64689bfc4db79492da4fb6c541a5ae03
+Description:  Bash is an sh-compatible command language interpreter that executes
+ commands read from the standard input or from a file. Bash also
+ incorporates useful features from the Korn and C shells (ksh and csh).
+
+Package: boost-system
+Version: 1.75.0-3
+Depends: libc, libstdcpp6, libpthread, librt
+Source: feeds/packages/libs/boost
+SourceName: boost-system
+License: BSL-1.0
+LicenseFiles: LICENSE_1_0.txt
+Section: libs
+SourceDateEpoch: 1616864980
+CPE-ID: cpe:/a:boost:boost
+Maintainer: Carlos M. Ferreira <carlosmf.pt@gmail.com>
+Architecture: x86_64
+Installed-Size: 952
+Filename: boost-system_1.75.0-3_x86_64.ipk
+Size: 1769
+SHA256sum: 5f99a80dccfb2815450c51bf3b77e92ff249efd86a44641145f4d827a2693033
+Description:  This package contains the Boost system library.
+
+Package: boost
+Version: 1.75.0-3
+Depends: libc, libstdcpp6, libpthread, librt
+Source: feeds/packages/libs/boost
+SourceName: boost
+License: BSL-1.0
+LicenseFiles: LICENSE_1_0.txt
+Section: libs
+SourceDateEpoch: 1616864980
+CPE-ID: cpe:/a:boost:boost
+Maintainer: Carlos M. Ferreira <carlosmf.pt@gmail.com>
+Architecture: x86_64
+Installed-Size: 106
+Filename: boost_1.75.0-3_x86_64.ipk
+Size: 1248
+SHA256sum: 736b73c4e0a12609f7a33b887192bb9c8207d98d0b7485106a7531c90535b2be
+Description:  This package provides the Boost v1.75.0 libraries.
+ Boost is a set of free, peer-reviewed, portable C++ source libraries.
+ 
+ This package provides the following run-time libraries:
+ - atomic
+ - chrono
+ - container
+ - context
+ - contract
+ - coroutine and coroutine2 (Coroutine is deprecated - use Coroutine2)
+ - date_time
+ - exception
+ - filesystem
+ - fiber
+ - graph
+ - - graph-parallel
+ - iostreams
+ - json
+ - locale
+ - log
+ - math
+ - nowide
+ - program_options
+ - python3
+ - random
+ - regex
+ - serialization and wserialization
+ - stackstrace
+ - system
+ - thread
+ - timer
+ - type_erasure
+ - wave
+ 
+ There are many more header-only libraries supported by Boost.
+ See more at http://www.boost.org/doc/libs/1_75_0/
+
+Package: cgi-io
+Version: 2022-08-10-901b0f04-21
+Depends: libc, libubox20210516, libubus20210630
+Source: feeds/packages/net/cgi-io
+SourceName: cgi-io
+License: GPL-2.0-or-later
+Section: net
+SourceDateEpoch: 1660168492
+Maintainer: John Crispin <blogic@openwrt.org>
+Architecture: x86_64
+Installed-Size: 8843
+Filename: cgi-io_2022-08-10-901b0f04-21_x86_64.ipk
+Size: 9640
+SHA256sum: 41e5aed43c4f1c7bf1f767bdbb4306e05e09842aae23834dc78da5cfe0ba2a6c
+Description:  This package contains an cgi utility that is useful for up/downloading files
+
+Package: coreutils-nohup
+Version: 8.32-6
+Depends: libc, coreutils
+Alternatives: 300:/usr/bin/nohup:/usr/libexec/nohup-coreutils
+Source: feeds/packages/utils/coreutils
+SourceName: coreutils-nohup
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1614187565
+CPE-ID: cpe:/a:gnu:coreutils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x86_64
+Installed-Size: 21660
+Filename: coreutils-nohup_8.32-6_x86_64.ipk
+Size: 22444
+SHA256sum: d94ac895dcbeca242bf88dcf1e6f8e14d26a723ddc3a06ee98efae1290b6348a
+Description:  Full version of standard GNU nohup utility.
+
+Package: coreutils
+Version: 8.32-6
+Depends: libc
+Source: feeds/packages/utils/coreutils
+SourceName: coreutils
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1614187565
+CPE-ID: cpe:/a:gnu:coreutils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x86_64
+Installed-Size: 104
+Filename: coreutils_8.32-6_x86_64.ipk
+Size: 989
+SHA256sum: 81bb476fd51444f028038b8cde53ec1c56fe894a6af583330ff4891af0064fd8
+Description:  Full versions of standard GNU utilities. If an equivalent Busybox applet is
+ available, you should consider compiling that instead as Busybox applets are
+ usually smaller, at the expense of reduced functionality.
+
+Package: curl
+Version: 7.83.1-20
+Depends: libc, libcurl
+Source: feeds/packages/net/curl
+SourceName: curl
+License: MIT
+LicenseFiles: COPYING
+Section: net
+SourceDateEpoch: 1697090345
+CPE-ID: cpe:/a:haxx:libcurl
+Maintainer: Stan Grishin <stangri@melmac.ca>
+Architecture: x86_64
+Installed-Size: 56671
+Filename: curl_7.83.1-20_x86_64.ipk
+Size: 57477
+SHA256sum: fdbb90dadb82d0293e6c7a84df1cf0c29d91994d0d978bda9746fb9553bb6b5a
+Description:  A client-side URL transfer utility
+
+Package: krb5-libs
+Version: 1.18.3-2
+Depends: libc, libncurses6, libss2, libcomerr0
+Source: feeds/packages/net/krb5
+SourceName: krb5-libs
+License: MIT
+LicenseFiles: NOTICE
+Section: net
+SourceDateEpoch: 1614187565
+CPE-ID: cpe:/a:mit:kerberos
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: x86_64
+Installed-Size: 693481
+Filename: krb5-libs_1.18.3-2_x86_64.ipk
+Size: 685269
+SHA256sum: a6172c4fcbc19721f3369eb490b7e4142bbf75c14735f632e16ac4a76b5b1861
+Description:  Kerberos 5 Shared Libraries
+
+Package: ksmbd-server
+Version: 3.4.5-3
+Depends: libc, kmod-fs-ksmbd, libnl-core200, libnl-genl200
+Source: feeds/packages/net/ksmbd-tools
+SourceName: ksmbd-server
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Section: net
+SourceDateEpoch: 1662818751
+Maintainer: Andy Walsh <andy.walsh44+github@gmail.com>
+Architecture: x86_64
+Installed-Size: 61161
+Filename: ksmbd-server_3.4.5-3_x86_64.ipk
+Size: 62204
+SHA256sum: c6aab963c26d6488f106a6562a8cb04abbf1a89f198dbc1b8aa5642a523ce4cb
+Description:  installs: ksmbd.mountd
+ 
+ This provides the basic fileserver service and is the minimum needed to serve 'guest only' file shares or use a existing user database file ksmbdpwd.db.
+
+Package: libQt6Core
+Version: 6.4.3-1
+Depends: libc, libatomic1, libdouble-conversion, libstdcpp6, zlib, libpcre2-16
+Source: feeds/packages/libs/qt6base
+SourceName: libQt6Core
+License: LGPL-2.1
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1685345635
+CPE-ID: cpe:/a:qt:qt
+Maintainer: Krypton Lee <jun.k.lee199410@outlook.com>
+Architecture: x86_64
+Installed-Size: 2730680
+Filename: libQt6Core_6.4.3-1_x86_64.ipk
+Size: 2725996
+SHA256sum: b593766bce3b9377f916168ac945a34af7bc1c549105580615975f26ab101908
+Description:  This package provides the Qt6 Core v6.4.3 library.
+
+Package: libQt6Network
+Version: 6.4.3-1
+Depends: libc, libatomic1, libdouble-conversion, libstdcpp6, zlib, libQt6Core, libopenssl1.1, krb5-libs
+Source: feeds/packages/libs/qt6base
+SourceName: libQt6Network
+License: LGPL-2.1
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1685345635
+CPE-ID: cpe:/a:qt:qt
+Maintainer: Krypton Lee <jun.k.lee199410@outlook.com>
+Architecture: x86_64
+Installed-Size: 769326
+Filename: libQt6Network_6.4.3-1_x86_64.ipk
+Size: 768975
+SHA256sum: 6a9769c18891d4cf408c14491469bac6f26bfc8e1be275c4d50b34047a02b97b
+Description:  This package provides the Qt6 Network v6.4.3 library.
+
+Package: libQt6Sql
+Version: 6.4.3-1
+Depends: libc, libatomic1, libdouble-conversion, libstdcpp6, zlib, libQt6Core, libsqlite3-0
+Source: feeds/packages/libs/qt6base
+SourceName: libQt6Sql
+License: LGPL-2.1
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1685345635
+CPE-ID: cpe:/a:qt:qt
+Maintainer: Krypton Lee <jun.k.lee199410@outlook.com>
+Architecture: x86_64
+Installed-Size: 80129
+Filename: libQt6Sql_6.4.3-1_x86_64.ipk
+Size: 81039
+SHA256sum: 54acec2767beb2bf0a34ca7af83687cac36e65b7718fdee4e1c06c394a505459
+Description:  This package provides the Qt6 Sql v6.4.3 library.
+
+Package: libQt6Xml
+Version: 6.4.3-1
+Depends: libc, libatomic1, libdouble-conversion, libstdcpp6, zlib, libQt6Core
+Source: feeds/packages/libs/qt6base
+SourceName: libQt6Xml
+License: LGPL-2.1
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1685345635
+CPE-ID: cpe:/a:qt:qt
+Maintainer: Krypton Lee <jun.k.lee199410@outlook.com>
+Architecture: x86_64
+Installed-Size: 55659
+Filename: libQt6Xml_6.4.3-1_x86_64.ipk
+Size: 56574
+SHA256sum: 3f4eacfc2efdf542125dd65471ecec88cfbe5e730ebfb45ec23c8f5d41d4dbca
+Description:  This package provides the Qt6 Xml v6.4.3 library.
+
+Package: libcap-bin
+Version: 2.43-1
+Depends: libc, libcap
+Source: feeds/packages/libs/libcap
+SourceName: libcap-bin
+License: GPL-2.0-only
+LicenseFiles: License
+Section: libs
+SourceDateEpoch: 1614187565
+Maintainer: Paul Wassi <p.wassi@gmx.at>
+Architecture: x86_64
+Installed-Size: 12201
+Filename: libcap-bin_2.43-1_x86_64.ipk
+Size: 12913
+SHA256sum: 7ecd37d9f1d284b96ec518090de9ebdee496742508934128c8bdbc9cdf0b4992
+Description:  Linux capabilities
+ .
+ This package contains the libcap utilities.
+
+Package: libcap
+Version: 2.43-1
+Depends: libc
+Source: feeds/packages/libs/libcap
+SourceName: libcap
+License: GPL-2.0-only
+LicenseFiles: License
+Section: libs
+SourceDateEpoch: 1614187565
+Maintainer: Paul Wassi <p.wassi@gmx.at>
+Architecture: x86_64
+Installed-Size: 11345
+Filename: libcap_2.43-1_x86_64.ipk
+Size: 12088
+SHA256sum: 2839cf2d0058f03ba6fc2c8f942a08170fecbbc251650563393ea2c11de37935
+Description:  Linux capabilities library library
+
+Package: libcurl4
+Version: 7.83.1-20
+Depends: libc, libopenssl1.1, libpthread, libnghttp2-14, ca-bundle
+Provides: libcurl
+Source: feeds/packages/net/curl
+SourceName: libcurl
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1697090345
+ABIVersion: 4
+CPE-ID: cpe:/a:haxx:libcurl
+Maintainer: Stan Grishin <stangri@melmac.ca>
+Architecture: x86_64
+Installed-Size: 183567
+Filename: libcurl4_7.83.1-20_x86_64.ipk
+Size: 184420
+SHA256sum: 09d50e54f075ba3a29d5c75cbee7f437f8a5b3bac8f0b9da32a14fb3e47c8731
+Description:  A client-side URL transfer library
+
+Package: libdb47
+Version: 4.7.25.4.NC-6
+Depends: libc
+Provides: libdb47-full
+Source: feeds/packages/libs/db47
+SourceName: libdb47
+License: Sleepycat
+LicenseFiles: LICENSE
+Section: libs
+SourceDateEpoch: 1610243196
+Maintainer: Marcel Denia <naoir@gmx.net>
+Architecture: x86_64
+Installed-Size: 525022
+Filename: libdb47_4.7.25.4.NC-6_x86_64.ipk
+Size: 525339
+SHA256sum: b4f9698ed7d4d580f696080b0f1a8a4f0db0ea7d728f70f98271ad76a6299aa4
+Description:  Berkeley DB library (4.7).
+
+Package: libdouble-conversion
+Version: 3.1.5-3
+Depends: libc, libstdcpp6
+Source: feeds/packages/libs/libdouble-conversion
+SourceName: libdouble-conversion
+License: BSD-3c
+LicenseFiles: COPYING LICENSE
+Section: libs
+SourceDateEpoch: 1590657913
+Architecture: x86_64
+Installed-Size: 19737
+Filename: libdouble-conversion_3.1.5-3_x86_64.ipk
+Size: 20635
+SHA256sum: 0a62d485b102f91d918cf6014ec607daf0ae3c4658dc5d3d421bb7616622b2c8
+Description:  double-conversion provides binary-decimal and decimal-binary routines for IEEE doubles.
+ 
+ The library consists of efficient conversion routines that have been extracted
+ from the V8 JavaScript engine. The code has been refactored and improved so that
+ it can be used more easily in other projects.
+
+Package: libnghttp2-14
+Version: 1.43.0-1
+Depends: libc
+Provides: libnghttp2
+Source: feeds/packages/libs/nghttp2
+SourceName: libnghttp2
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1612720536
+ABIVersion: -14
+Maintainer: Hans Dedecker <dedeckeh@gmail.com>
+Architecture: x86_64
+Installed-Size: 67685
+Filename: libnghttp2-14_1.43.0-1_x86_64.ipk
+Size: 67283
+SHA256sum: cacb60ce6e9cd3e663ff6991e309594022759b0d188ca8b30677b496021aabab
+Description:  C library implementing the framing layer of the HTTP/2 protocol. It can be used to build a HTTP/2-capable HTTP client or server
+
+Package: libpcre2-16
+Version: 10.36-1
+Depends: libc
+Source: feeds/packages/libs/pcre2
+SourceName: libpcre2-16
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Section: libs
+SourceDateEpoch: 1607997754
+CPE-ID: cpe:/a:pcre:pcre
+Maintainer: Shane Peelar <lookatyouhacker@gmail.com>
+Architecture: x86_64
+Installed-Size: 165876
+Filename: libpcre2-16_10.36-1_x86_64.ipk
+Size: 166741
+SHA256sum: 7b14283cf1a5a381aa354e3d5e6d8158d1731c73ef06234602f4a50d9713d6ec
+Description:  A Perl Compatible Regular Expression library (16bit support)
+
+Package: libpcre2
+Version: 10.36-1
+Depends: libc
+Source: feeds/packages/libs/pcre2
+SourceName: libpcre2
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Section: libs
+SourceDateEpoch: 1607997754
+CPE-ID: cpe:/a:pcre:pcre
+Maintainer: Shane Peelar <lookatyouhacker@gmail.com>
+Architecture: x86_64
+Installed-Size: 182053
+Filename: libpcre2_10.36-1_x86_64.ipk
+Size: 182912
+SHA256sum: 25b93987660639f371c8b9dba3e067126bd6b7b79bba40f4c8914bb48a6f0532
+Description:  A Perl Compatible Regular Expression library
+
+Package: libruby3.0
+Version: 3.0.5-1
+Depends: libc, libpthread, librt, libgmp10, zlib
+Provides: libruby
+Source: feeds/packages/lang/ruby
+SourceName: libruby
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1670884318
+ABIVersion: 3.0
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 1113626
+Filename: libruby3.0_3.0.5-1_x86_64.ipk
+Size: 1108868
+SHA256sum: 00ab717f4c09f9f4133cfc422c25be92bfda830f9b2f27665cc78f84bcc34840
+Description:  Ruby scripting language (shared library)
+
+Package: libsensors5
+Version: 3.6.0-1
+Depends: libc, sysfsutils
+Provides: libsensors
+Source: feeds/packages/utils/lm-sensors
+SourceName: libsensors
+License: GPL-2.0-or-later LGPL-2.1-or-later
+Section: libs
+SourceDateEpoch: 1609983297
+ABIVersion: 5
+CPE-ID: cpe:/a:lm_sensors:lm_sensors
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x86_64
+Installed-Size: 19777
+Filename: libsensors5_3.6.0-1_x86_64.ipk
+Size: 20476
+SHA256sum: e1c94b77d966e1a28d5939fecea45ff2cbb1a75df17293517cc7759ad10c54fc
+Description:  lm-sensors libraries
+
+Package: libsqlite3-0
+Version: 3410200-1
+Depends: libc, libpthread, zlib
+Provides: libsqlite3
+Source: feeds/packages/libs/sqlite3
+SourceName: libsqlite3
+License: PUBLICDOMAIN
+Section: libs
+SourceDateEpoch: 1682859568
+ABIVersion: -0
+CPE-ID: cpe:/a:sqlite:sqlite
+Architecture: x86_64
+Installed-Size: 524880
+Filename: libsqlite3-0_3410200-1_x86_64.ipk
+Size: 525706
+SHA256sum: a273de3d222a692b48aa5652bfe32f7e0156e3801065a753a8b271d32647c4d7
+Description:  SQLite is a small C library that implements a self-contained, embeddable,
+ zero-configuration SQL database engine.
+ This package contains the SQLite (v3.x) shared library, used by other
+ programs.
+
+Package: libtorrent-rasterbar
+Version: 2.0.8-1
+Depends: libc, boost, boost-system, libopenssl1.1, libatomic1, libstdcpp6
+Source: feeds/packages/libs/libtorrent-rasterbar
+SourceName: libtorrent-rasterbar
+License: BSD-3-Clause
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1674372320
+Maintainer: David Yang <mmyangfl@gmail.com>
+Architecture: x86_64
+Installed-Size: 1431781
+Filename: libtorrent-rasterbar_2.0.8-1_x86_64.ipk
+Size: 1429270
+SHA256sum: d4730a9e5e6ea83ff75c1d6631b6b43cc91ccf1261430108afbd3647e3c97402
+Description:  Rasterbar libtorrent is a C++ library that aims to be a good alternative to
+ all the other bittorrent implementations around.
+
+Package: libyaml
+Version: 0.2.5-1
+Depends: libc
+Source: feeds/packages/libs/yaml
+SourceName: libyaml
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1593132224
+CPE-ID: cpe:/a:pyyaml_project:pyyaml
+Architecture: x86_64
+Installed-Size: 41092
+Filename: libyaml_0.2.5-1_x86_64.ipk
+Size: 41966
+SHA256sum: 90a046873c543885ed94ff872430bb47848af565f55f48fe780e8fed2fcf614d
+Description:  Fast YAML 1.1 parser and emitter library
+
+Package: lm-sensors
+Version: 3.6.0-1
+Depends: libc, sysfsutils, libsensors
+Source: feeds/packages/utils/lm-sensors
+SourceName: lm-sensors
+License: GPL-2.0-or-later LGPL-2.1-or-later
+Section: utils
+SourceDateEpoch: 1609983297
+CPE-ID: cpe:/a:lm_sensors:lm_sensors
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x86_64
+Installed-Size: 8211
+Filename: lm-sensors_3.6.0-1_x86_64.ipk
+Size: 9040
+SHA256sum: 14509ae3efdac5233fb3606da2f9898abe77f7b73634944c86af458a733a48b8
+Description:  utility to read hardware sensor data
+
+Package: miniupnpd
+Version: 2.0.20170421-4
+Depends: libc, iptables, libip4tc2, libip6tc2, ip6tables, libuuid1
+Source: feeds/packages/net/miniupnpd
+SourceName: miniupnpd
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1682748893
+CPE-ID: cpe:/a:miniupnp_project:miniupnpd
+Architecture: x86_64
+Installed-Size: 58805
+Filename: miniupnpd_2.0.20170421-4_x86_64.ipk
+Size: 59766
+SHA256sum: 85cd3cbd2018bb908415182ac18ca95b808ebdea290f321330917c5f4846e1e3
+Description:  Lightweight UPnP IGD, NAT-PMP & PCP daemon
+
+Package: qbittorrent-enhanced-edition
+Version: 4.5.5.10-2
+Depends: libc, libtorrent-rasterbar, libQt6Core, libQt6Network, libQt6Sql, libQt6Xml, qt6-plugin-libqopensslbackend, qt6-plugin-libqsqlite
+Provides: qbittorrent
+Source: feeds/packages/net/qBittorrent-Enhanced-Edition
+SourceName: qbittorrent-enhanced-edition
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Section: net
+SourceDateEpoch: 1702725788
+CPE-ID: cpe:/a:qbittorrent:qbittorrent
+Architecture: x86_64
+Installed-Size: 7696920
+Filename: qbittorrent-enhanced-edition_4.5.5.10-2_x86_64.ipk
+Size: 7694024
+SHA256sum: 62e4bd82def28933a32ee6637161de805b4fbc4391bce9a3ac36f091a80dc373
+Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
+ libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
+ It aims to be a good alternative to all other bittorrent clients out
+ there. qBittorrent is fast, stable and provides unicode support as
+ well as many features.
+
+Package: qt6-plugin-libqopensslbackend
+Version: 6.4.3-1
+Depends: libc, libatomic1, libdouble-conversion, libstdcpp6, zlib, libQt6Network
+Source: feeds/packages/libs/qt6base
+SourceName: qt6-plugin-libqopensslbackend
+License: LGPL-2.1
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1685345635
+CPE-ID: cpe:/a:qt:qt
+Maintainer: Krypton Lee <jun.k.lee199410@outlook.com>
+Architecture: x86_64
+Installed-Size: 118390
+Filename: qt6-plugin-libqopensslbackend_6.4.3-1_x86_64.ipk
+Size: 119020
+SHA256sum: 4748446d2d12b545dd342ea521ef83e8a534b09376bd0fb71f1577c868b54d15
+Description:  Qt6 Plugin libqopensslbackend
+
+Package: qt6-plugin-libqsqlite
+Version: 6.4.3-1
+Depends: libc, libatomic1, libdouble-conversion, libstdcpp6, zlib, libQt6Sql
+Source: feeds/packages/libs/qt6base
+SourceName: qt6-plugin-libqsqlite
+License: LGPL-2.1
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1685345635
+CPE-ID: cpe:/a:qt:qt
+Maintainer: Krypton Lee <jun.k.lee199410@outlook.com>
+Architecture: x86_64
+Installed-Size: 34943
+Filename: qt6-plugin-libqsqlite_6.4.3-1_x86_64.ipk
+Size: 35828
+SHA256sum: 6a187e19bf350a0f65098288a4f530ac4ea1af2a5eef7fb7b5106c5f4ed0a822
+Description:  Qt6 Plugin libqsqlite
+
+Package: ruby-bigdecimal
+Version: 3.0.5-1
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+SourceName: ruby-bigdecimal
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 33093
+Filename: ruby-bigdecimal_3.0.5-1_x86_64.ipk
+Size: 34014
+SHA256sum: e2f6fd26b1548f6481442a749937d30f579d96743182685b8f305453400f8fe1
+Description:  This package contains the ruby Arbitrary-precision decimal floating-point library.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/*/bigdecimal.so 
+ - /usr/lib/ruby/3.0/bigdecimal/ 
+ - /usr/lib/ruby/3.0/bigdecimal.rb 
+ - /usr/lib/ruby/gems/3.0/specifications/default/bigdecimal-*.gemspec
+ 
+
+Package: ruby-date
+Version: 3.0.5-1
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+SourceName: ruby-date
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 63003
+Filename: ruby-date_3.0.5-1_x86_64.ipk
+Size: 63938
+SHA256sum: a80b3677efef6a1604dd44b565aeea2f1b648c79e45084c04fe5c9df051e0e72
+Description:  This package contains the ruby Comparable module for handling dates.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/date.rb 
+ - /usr/lib/ruby/3.0/*/date_core.so 
+ - /usr/lib/ruby/gems/3.0/specifications/default/date-*.gemspec
+ 
+
+Package: ruby-dbm
+Version: 3.0.5-1
+Depends: libc, ruby, libdb47
+Source: feeds/packages/lang/ruby
+SourceName: ruby-dbm
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 8159
+Filename: ruby-dbm_3.0.5-1_x86_64.ipk
+Size: 9110
+SHA256sum: 004aa5ce3dd49d884b68d189c4667e3dd7ace35033669cb8793aef9ccc98cb70
+Description:  The DBM class provides a wrapper to a Unix-style dbm or Database Manager library.
+ This package provides dbm.so file.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/*/dbm.so 
+ - /usr/lib/ruby/gems/3.0/specifications/default/dbm-*.gemspec
+ 
+
+Package: ruby-digest
+Version: 3.0.5-1
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+SourceName: ruby-digest
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 24931
+Filename: ruby-digest_3.0.5-1_x86_64.ipk
+Size: 25760
+SHA256sum: 74ab16e10fc4d53d2c328abb09df384e6a321e27ab177aa33aa3c249d1d0fea3
+Description:  Provides digest* files. Can be configured to use OpenSSL or
+ bundled hash functions.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/digest 
+ - /usr/lib/ruby/3.0/digest.rb 
+ - /usr/lib/ruby/3.0/*/digest.so 
+ - /usr/lib/ruby/3.0/*/digest/* 
+ - /usr/lib/ruby/gems/3.0/specifications/default/digest-*.gemspec
+ 
+
+Package: ruby-enc
+Version: 3.0.5-1
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+SourceName: ruby-enc
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 9690
+Filename: ruby-enc_3.0.5-1_x86_64.ipk
+Size: 10511
+SHA256sum: a6a8d7e61fe390e21a31250f89992bad023c8a2c140833aeba3f757f8984b372
+Description:  This package contains the ruby character re-coding library charset (small subset).
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/*/enc/encdb.so 
+ - /usr/lib/ruby/3.0/*/enc/iso_8859_1.so 
+ - /usr/lib/ruby/3.0/*/enc/utf_*.so 
+ - /usr/lib/ruby/3.0/*/enc/euc_jp.so
+ 
+
+Package: ruby-forwardable
+Version: 3.0.5-1
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+SourceName: ruby-forwardable
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 3788
+Filename: ruby-forwardable_3.0.5-1_x86_64.ipk
+Size: 4678
+SHA256sum: 4fc5fb454de61799356a717ed5fbc180ac2191cc386685c26182124a34e5de71
+Description:  This package contains the ruby delegation of methods to a object.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/forwardable.rb 
+ - /usr/lib/ruby/3.0/forwardable 
+ - /usr/lib/ruby/gems/3.0/specifications/default/forwardable-*.gemspec
+ 
+
+Package: ruby-pstore
+Version: 3.0.5-1
+Depends: libc, ruby, ruby-digest, ruby-enc
+Source: feeds/packages/lang/ruby
+SourceName: ruby-pstore
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 5463
+Filename: ruby-pstore_3.0.5-1_x86_64.ipk
+Size: 6335
+SHA256sum: d47639e9fe123f842edf3cc16c555592cbb5d665593cc134de547eb444f20e3e
+Description:  This package contains the ruby file based persistence.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/pstore.rb 
+ - /usr/lib/ruby/3.0/pstore/ 
+ - /usr/lib/ruby/gems/3.0/gems/pstore-*/ 
+ - /usr/lib/ruby/gems/3.0/specifications/default/pstore-*.gemspec
+ 
+
+Package: ruby-psych
+Version: 3.0.5-1
+Depends: libc, ruby, ruby-bigdecimal, ruby-date, ruby-enc, ruby-forwardable, ruby-stringio, ruby-strscan, libyaml
+Source: feeds/packages/lang/ruby
+SourceName: ruby-psych
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 33832
+Filename: ruby-psych_3.0.5-1_x86_64.ipk
+Size: 34802
+SHA256sum: 2fea9adf7afaf4624da00c7090eb4feaaccb9e45b908efa433a9d9a0a1c8e382
+Description:  This package contains the ruby YAML parser and emitter.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/psych 
+ - /usr/lib/ruby/3.0/psych.rb 
+ - /usr/lib/ruby/3.0/*/psych.so 
+ - /usr/lib/ruby/gems/3.0/specifications/default/psych-*.gemspec
+ 
+
+Package: ruby-stringio
+Version: 3.0.5-1
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+SourceName: ruby-stringio
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 12047
+Filename: ruby-stringio_3.0.5-1_x86_64.ipk
+Size: 12925
+SHA256sum: 44f7beb6e1c31c3bb0a1835d218f67695f8f4d869e63a259dae687bb1efd9009
+Description:  This package contains the ruby Pseudo `IO` class from/to `String`.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/*/stringio.so 
+ - /usr/lib/ruby/gems/3.0/specifications/default/stringio-*.gemspec
+ 
+
+Package: ruby-strscan
+Version: 3.0.5-1
+Depends: libc, ruby
+Source: feeds/packages/lang/ruby
+SourceName: ruby-strscan
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 8923
+Filename: ruby-strscan_3.0.5-1_x86_64.ipk
+Size: 9802
+SHA256sum: d25cbdc0989be68446645b60ee13077de4b088bff1e9ab66bdb13e220a7bc258
+Description:  This package contains the ruby Lexical scanning operations on a String.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/*/strscan.so 
+ - /usr/lib/ruby/gems/3.0/specifications/default/strscan-*.gemspec
+ 
+
+Package: ruby-yaml
+Version: 3.0.5-1
+Depends: libc, ruby, ruby-dbm, ruby-pstore, ruby-psych
+Source: feeds/packages/lang/ruby
+SourceName: ruby-yaml
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 4354
+Filename: ruby-yaml_3.0.5-1_x86_64.ipk
+Size: 5215
+SHA256sum: ba5fd82ea8817fc0b5bd91dc768194af6140dc14797ab87455bce92e138c9f85
+Description:  This package contains the ruby YAML toolkit.
+ 
+ Provides:
+ 
+ - /usr/lib/ruby/3.0/yaml 
+ - /usr/lib/ruby/3.0/yaml.rb 
+ - /usr/lib/ruby/gems/3.0/gems/yaml-*/ 
+ - /usr/lib/ruby/gems/3.0/specifications/default/yaml-*.gemspec
+ 
+
+Package: ruby
+Version: 3.0.5-1
+Depends: libc, libruby3.0
+Source: feeds/packages/lang/ruby
+SourceName: ruby
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: lang
+SourceDateEpoch: 1670884318
+CPE-ID: cpe:/a:ruby-lang:ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Architecture: x86_64
+Installed-Size: 1637
+Filename: ruby_3.0.5-1_x86_64.ipk
+Size: 2549
+SHA256sum: 57db5e4663abd2c3ed163434db942636d8177814503d4b25a22abdc1cc58567f
+Description:  Ruby is the interpreted scripting language for quick and easy
+ object-oriented programming.  It has many features to process text files
+ and to do system management tasks (as in perl).  It is simple,
+ straight-forward, and extensible.
+ 
+
+Package: unzip
+Version: 6.0-8
+Depends: libc
+Source: feeds/packages/utils/unzip
+SourceName: unzip
+License: BSD-4-Clause
+LicenseFiles: LICENSE
+Section: utils
+SourceDateEpoch: 1614187565
+CPE-ID: cpe:/a:info-zip:unzip
+Maintainer: Álvaro Fernández Rojas <noltari@gmail.com>
+Architecture: x86_64
+Installed-Size: 108651
+Filename: unzip_6.0-8_x86_64.ipk
+Size: 109659
+SHA256sum: c1f373da6e285046e3e6c933fb70e1b6ca82ddab36f956d275e4a5a09d7b2caa
+Description:  InfoZIP's unzip program. With the exception of multi-volume archives
+ (ie, .ZIP files that are split across several disks using PKZIP's /& option),
+ this can handle any file produced either by PKZIP, or the corresponding
+ InfoZIP zip program.
+
+Package: vlmcsd
+Version: svn1113-3
+Depends: libc, libpthread
+Source: feeds/packages/net/vlmcsd
+SourceName: vlmcsd
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1621014785
+Maintainer: fuyumi <280604399@qq.com>
+Architecture: x86_64
+Installed-Size: 22490
+Filename: vlmcsd_svn1113-3_x86_64.ipk
+Size: 23337
+SHA256sum: d05553389ae6b7d8bf75f64fa5c2819054b3c47449ff9d5cb3bb98da70327ac4
+Description:  KMS Emulator in C (currently runs on Linux including Android, FreeBSD,
+ Solaris, Minix, Mac OS, iOS, Windows with or without Cygwin)
+
+Package: wget-ssl
+Version: 1.21.4-1
+Depends: libc, libpcre2, zlib, libopenssl1.1, librt
+Provides: gnu-wget, wget
+Alternatives: 300:/usr/bin/wget:/usr/libexec/wget-ssl, 300:/usr/bin/wget-ssl:/usr/libexec/wget-ssl
+Source: feeds/packages/net/wget
+SourceName: wget-ssl
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: net
+SourceDateEpoch: 1696386710
+CPE-ID: cpe:/a:gnu:wget
+Architecture: x86_64
+Installed-Size: 218168
+Filename: wget-ssl_1.21.4-1_x86_64.ipk
+Size: 219234
+SHA256sum: 072d51e1cb98c45049c1b30ed19fd280f4feb6036f28eb226fab87a4b8dbea8a
+Description:  Wget is a network utility to retrieve files from the Web using http
+ and ftp, the two most widely used Internet protocols. It works
+ non-interactively, so it will work in the background, after having
+ logged off. The program supports recursive retrieval of web-authoring
+ pages as well as ftp sites -- you can use wget to make mirrors of
+ archives and home pages or to travel the Web like a WWW robot.
+ This package is built with SSL support.
+
+Package: wsdd2
+Version: 2021-08-09-bcc51c3e-4
+Depends: libc
+Source: feeds/packages/net/wsdd2
+SourceName: wsdd2
+License: GPL-3.0-only
+LicenseFiles: COPYING
+Section: net
+SourceDateEpoch: 1684657273
+Maintainer: Andy Walsh <andy.walsh44+github@gmail.com>
+Architecture: x86_64
+Installed-Size: 19076
+Filename: wsdd2_2021-08-09-bcc51c3e-4_x86_64.ipk
+Size: 20038
+SHA256sum: 7c8759a430e3bdb5a732fda565552c526e64f481d49e5738c142ab8d536c55b5
+Description:  Web Services for Devices or Web Services on Devices (WSD),
+ is a Microsoft API to simplify programming connections to web service
+ enabled devices, such as printers, scanners and file shares.
+ 
+ This daemon advertises and responds to probe requests from Windows clients looking for file shares.
+ It also implements LLMNR multicast name lookup services.
+
